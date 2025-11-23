@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Portal | Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/animation.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container nav-wrapper">
+            <div class="brand">
+                <div class="logo gradient" aria-hidden="true"></div>
+                <div>
+                    <span class="brand-title">Riverside International School</span>
+                    <span class="brand-tagline">Student dashboard</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <a class="nav-link" href="/templates/home.html">Home</a>
+                <a class="nav-link" href="/templates/departments.html">Departments</a>
+                <a class="nav-link" href="/templates/teachers.html">Teachers</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-button" id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h1 id="dashboard-greeting">Welcome, Student</h1>
+                <p class="lead">Here is a quick overview of your portal activity and school updates.</p>
+            </div>
+
+            <div class="feature-grid fade-in delay-1">
+                <div class="card shadow-soft">
+                    <h3>Upcoming Classes</h3>
+                    <p class="muted">Stay ready for your lessons and activities.</p>
+                    <ul class="muted" style="margin-top: 0.75rem; line-height: 1.6;">
+                        <li>Mathematics — Monday, 9:00 AM</li>
+                        <li>Science Lab — Tuesday, 11:30 AM</li>
+                        <li>Literature — Thursday, 10:00 AM</li>
+                    </ul>
+                </div>
+                <div class="card shadow-soft">
+                    <h3>News & Highlights</h3>
+                    <p class="muted">Latest updates from Riverside International School.</p>
+                    <ul class="muted" style="margin-top: 0.75rem; line-height: 1.6;">
+                        <li>Sports day registrations are now open.</li>
+                        <li>Parent-teacher meetings scheduled for next week.</li>
+                        <li>New library books available for borrowing.</li>
+                    </ul>
+                </div>
+                <div class="card shadow-soft">
+                    <h3>Quick Actions</h3>
+                    <p class="muted">Manage your portal access.</p>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem; flex-wrap: wrap;">
+                        <a class="btn primary" href="/templates/contact.html">Contact Office</a>
+                        <button class="icon-button" id="logout-btn-secondary">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/auth.js" defer></script>
+</body>
+</html>

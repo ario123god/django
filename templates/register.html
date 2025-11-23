@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Portal | Register</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/animation.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container nav-wrapper">
+            <div class="brand">
+                <div class="logo gradient" aria-hidden="true"></div>
+                <div>
+                    <span class="brand-title">Riverside International School</span>
+                    <span class="brand-tagline">Join our learning family</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <a class="nav-link" href="/templates/home.html">Home</a>
+                <a class="nav-link" href="/templates/about.html">About</a>
+                <a class="nav-link" href="/templates/contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="nav-link" href="login.html">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="section gradient">
+        <div class="container narrow">
+            <div class="card shadow-soft slide-up">
+                <!-- {% block content %} -->
+                <div class="section-header">
+                    <h1>Create your account</h1>
+                    <p class="lead">Register to access your classes, updates, and school resources.</p>
+                </div>
+                <div class="contact-form">
+                    <form id="register-form" novalidate>
+                        <label for="register-username">Username</label>
+                        <input id="register-username" name="username" type="text" placeholder="Student name" required>
+
+                        <label for="register-email">Email</label>
+                        <input id="register-email" name="email" type="email" placeholder="you@example.com" required>
+
+                        <label for="register-password">Password</label>
+                        <input id="register-password" name="password" type="password" placeholder="Create a password" required>
+
+                        <label for="register-confirm">Confirm password</label>
+                        <input id="register-confirm" name="confirm" type="password" placeholder="Re-enter password" required>
+
+                        <button type="submit" class="btn primary" style="width: 100%;">Register</button>
+                        <p id="register-message" class="muted"></p>
+                    </form>
+                </div>
+                <div class="section-header" style="margin-top: 1rem;">
+                    <p class="muted">Already have an account? <a class="nav-link" href="login.html">Login</a></p>
+                </div>
+                <!-- {% endblock %} -->
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/auth.js" defer></script>
+</body>
+</html>
