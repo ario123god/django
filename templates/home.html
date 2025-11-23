@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}Home | Evergreen International School{% endblock %}
+{% block content %}
+<section class="hero gradient" id="hero">
+    <div class="container hero-grid fade-in">
+        <div class="hero-text">
+            <p class="eyebrow" data-i18n="heroEyebrow">Welcome to our community</p>
+            <h1 data-i18n="heroTitle">Inspiring excellence through curiosity, creativity, and character.</h1>
+            <p class="lead" data-i18n="heroSubtitle">Evergreen International School blends rigorous academics with compassionate mentorship to help students thrive in a global society.</p>
+            <div class="cta-group">
+                <a class="btn primary" href="about.html" data-i18n="heroPrimary">Explore our story</a>
+                <a class="btn ghost" href="#news" data-i18n="heroSecondary">Latest news</a>
+            </div>
+        </div>
+        <div class="hero-card shadow-soft slide-up">
+            <h3 data-i18n="heroCardTitle">Upcoming Open Day</h3>
+            <p data-i18n="heroCardCopy">Meet our teachers, tour classrooms, and discover how we personalize learning for every child.</p>
+            <div class="info-chip" data-i18n="heroCardDate">Saturday, November 16 · 10:00 AM</div>
+            <div class="info-chip" data-i18n="heroCardLocation">Evergreen Campus Atrium</div>
+            <a class="btn secondary" href="contact.html" data-i18n="heroCardCta">Book your visit</a>
+        </div>
+    </div>
+</section>
+
+<section class="container section" id="about-preview">
+    <div class="section-header">
+        <p class="eyebrow" data-i18n="aboutEyebrow">Who we are</p>
+        <h2 data-i18n="aboutTitle">A caring environment where every student is seen and challenged.</h2>
+        <p class="section-desc" data-i18n="aboutCopy">From kindergarten to graduation, our educators design engaging lessons, lead clubs, and spark curiosity through arts, sciences, and service learning.</p>
+    </div>
+    <div class="feature-grid">
+        <div class="card shadow-soft" data-i18n-scope="feature1">
+            <h3 data-i18n="feature1Title">Modern Classrooms</h3>
+            <p data-i18n="feature1Copy">Light-filled labs, collaborative studios, and maker spaces equipped for STEM, media, and design.</p>
+        </div>
+        <div class="card shadow-soft" data-i18n-scope="feature2">
+            <h3 data-i18n="feature2Title">Whole-Child Care</h3>
+            <p data-i18n="feature2Copy">Counseling, wellness programs, and inclusive activities that support every learner’s wellbeing.</p>
+        </div>
+        <div class="card shadow-soft" data-i18n-scope="feature3">
+            <h3 data-i18n="feature3Title">Global Citizenship</h3>
+            <p data-i18n="feature3Copy">Bilingual curriculum, cultural exchanges, and community projects that broaden perspectives.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container section" id="news">
+    <div class="section-header">
+        <p class="eyebrow" data-i18n="newsEyebrow">News & Events</p>
+        <h2 data-i18n="newsTitle">Stay updated with campus life.</h2>
+    </div>
+    <div class="news-grid">
+        <article class="card news-card shadow-soft fade-in" data-i18n-scope="news1">
+            <p class="tag" data-i18n="news1Tag">Academics</p>
+            <h3 data-i18n="news1Title">Robotics team advances to regional finals</h3>
+            <p data-i18n="news1Copy">Our middle school robotics team earned top honors with their eco-friendly automation project.</p>
+            <span class="meta" data-i18n="news1Meta">October 28, 2024</span>
+        </article>
+        <article class="card news-card shadow-soft fade-in delay-1" data-i18n-scope="news2">
+            <p class="tag" data-i18n="news2Tag">Arts</p>
+            <h3 data-i18n="news2Title">Winter concert celebrates student talent</h3>
+            <p data-i18n="news2Copy">Choirs, orchestras, and theater students present an evening of music from around the world.</p>
+            <span class="meta" data-i18n="news2Meta">November 2, 2024</span>
+        </article>
+        <article class="card news-card shadow-soft fade-in delay-2" data-i18n-scope="news3">
+            <p class="tag" data-i18n="news3Tag">Community</p>
+            <h3 data-i18n="news3Title">Service day partners with local shelters</h3>
+            <p data-i18n="news3Copy">Students and families assembled care kits and raised funds for neighborhood shelters.</p>
+            <span class="meta" data-i18n="news3Meta">November 10, 2024</span>
+        </article>
+    </div>
+</section>
+{% endblock %}

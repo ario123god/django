@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Evergreen International School{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animation.css' %}">
+</head>
+<body class="light" data-theme="light">
+    <header class="topbar shadow-soft">
+        <div class="container nav-wrapper">
+            <a class="brand" href="home.html">
+                <img src="{% static 'img/logo.png' %}" alt="School Logo" class="logo">
+                <div class="brand-text">
+                    <span class="brand-title" data-i18n="brandName">Evergreen International School</span>
+                    <small class="brand-tagline" data-i18n="brandTagline">Learning for a brighter tomorrow</small>
+                </div>
+            </a>
+            <nav class="nav" id="primaryNav">
+                <a href="home.html" class="nav-link" data-i18n="navHome">Home</a>
+                <a href="about.html" class="nav-link" data-i18n="navAbout">About</a>
+                <a href="departments.html" class="nav-link" data-i18n="navDepartments">Departments</a>
+                <a href="teachers.html" class="nav-link" data-i18n="navTeachers">Teachers</a>
+                <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-button" id="langToggle" aria-label="Switch language" data-i18n="langToggle">FA</button>
+                <button class="icon-button" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon-moon" aria-hidden="true">🌙</span>
+                </button>
+                <button class="icon-button mobile-toggle" id="menuToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- {% block content %} -->
+        {% block content %}{% endblock %}
+        <!-- {% endblock %} -->
+    </main>
+
+    <footer class="footer gradient">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="{% static 'img/logo.png' %}" alt="School Logo" class="logo footer-logo">
+                <p data-i18n="footerAbout">Evergreen International School nurtures students to become confident, creative, and responsible global citizens.</p>
+            </div>
+            <div class="footer-links">
+                <h3 data-i18n="footerLinks">Quick Links</h3>
+                <a href="home.html" data-i18n="navHome">Home</a>
+                <a href="about.html" data-i18n="navAbout">About</a>
+                <a href="departments.html" data-i18n="navDepartments">Departments</a>
+                <a href="teachers.html" data-i18n="navTeachers">Teachers</a>
+                <a href="contact.html" data-i18n="navContact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h3 data-i18n="footerContact">Get in Touch</h3>
+                <p data-i18n="footerPhone">Phone: +1 (555) 123-4567</p>
+                <p data-i18n="footerEmail">Email: hello@evergreenschool.edu</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook" class="social-btn">&#xf09a;</a>
+                    <a href="#" aria-label="Twitter" class="social-btn">&#xf099;</a>
+                    <a href="#" aria-label="Instagram" class="social-btn">&#xf16d;</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footerRights">© 2024 Evergreen International School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

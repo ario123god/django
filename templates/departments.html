@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Departments | Evergreen International School{% endblock %}
+{% block content %}
+<section class="page-hero overlay" id="departments-hero">
+    <div class="container narrow">
+        <p class="eyebrow" data-i18n="departmentsEyebrow">Academics</p>
+        <h1 data-i18n="departmentsTitle">Dynamic departments that celebrate every field of study.</h1>
+        <p class="lead" data-i18n="departmentsCopy">From advanced sciences to fine arts, our faculty design hands-on experiences that make learning memorable.</p>
+    </div>
+</section>
+
+<section class="container section">
+    <div class="dept-grid">
+        <div class="dept-card shadow-soft fade-in" data-i18n-scope="dept1">
+            <div class="dept-icon">🔬</div>
+            <h3 data-i18n="dept1Title">Science & Research</h3>
+            <p data-i18n="dept1Copy">Biology, chemistry, physics, and environmental science labs with inquiry-based projects.</p>
+        </div>
+        <div class="dept-card shadow-soft fade-in delay-1" data-i18n-scope="dept2">
+            <div class="dept-icon">📚</div>
+            <h3 data-i18n="dept2Title">Humanities & Languages</h3>
+            <p data-i18n="dept2Copy">Literature, history, philosophy, and bilingual courses that strengthen critical thinking.</p>
+        </div>
+        <div class="dept-card shadow-soft fade-in delay-2" data-i18n-scope="dept3">
+            <div class="dept-icon">🧮</div>
+            <h3 data-i18n="dept3Title">Mathematics</h3>
+            <p data-i18n="dept3Copy">Applied mathematics, statistics, and problem-solving labs using real-world scenarios.</p>
+        </div>
+        <div class="dept-card shadow-soft fade-in" data-i18n-scope="dept4">
+            <div class="dept-icon">🎨</div>
+            <h3 data-i18n="dept4Title">Arts & Design</h3>
+            <p data-i18n="dept4Copy">Visual arts, theater, music ensembles, and digital design studios that inspire imagination.</p>
+        </div>
+        <div class="dept-card shadow-soft fade-in delay-1" data-i18n-scope="dept5">
+            <div class="dept-icon">💻</div>
+            <h3 data-i18n="dept5Title">Technology & Innovation</h3>
+            <p data-i18n="dept5Copy">Coding, robotics, UX design, and cybersecurity fundamentals for future-ready skills.</p>
+        </div>
+        <div class="dept-card shadow-soft fade-in delay-2" data-i18n-scope="dept6">
+            <div class="dept-icon">⚽</div>
+            <h3 data-i18n="dept6Title">Athletics & Wellness</h3>
+            <p data-i18n="dept6Copy">Team sports, fitness training, and mindfulness programs guided by certified coaches.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
