@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدرسه بین‌المللی اورگرین | Evergreen International School</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-kk7JwH7yOfX5gkeONKBJkpZBZDk2n80HXWurs2ksonMSKcwk5Y8ZndYBvC69l9+E" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a9c71;
+      --secondary: #0f5f4b;
+      --accent: #f1c40f;
+      --gradient: linear-gradient(135deg, #1abf8a, #117a65);
+      --shadow-soft: 0 15px 40px rgba(0, 0, 0, 0.08);
+    }
+    * {font-family: 'Vazirmatn', 'Poppins', sans-serif;}
+    body {
+      background: #f7f8fc;
+      color: #1f2937;
+      scroll-behavior: smooth;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+    }
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--gradient);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 800;
+      box-shadow: var(--shadow-soft);
+    }
+    .nav-link {font-weight: 600;}
+    .btn-gradient {
+      background-image: linear-gradient(120deg, #0f9f7a, #14c38e);
+      color: #fff !important;
+      border: none;
+      border-radius: 14px;
+      padding: 0.75rem 1.3rem;
+      box-shadow: 0 10px 25px rgba(20,195,142,0.35);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn-gradient:hover {transform: translateY(-2px); box-shadow: 0 16px 30px rgba(20,195,142,0.45);}
+    .btn-outline-light {border-radius: 14px; padding: 0.75rem 1.3rem;}
+    .hero {
+      background: radial-gradient(circle at 10% 20%, rgba(26,191,138,0.15), transparent 25%),
+                  radial-gradient(circle at 90% 10%, rgba(15,95,75,0.18), transparent 22%),
+                  #0a2a23;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      opacity: 0.18;
+      mix-blend-mode: screen;
+    }
+    .hero-content {position: relative; z-index: 2; padding: 5rem 0;}
+    .badge-soft {background: rgba(255,255,255,0.12); border-radius: 999px; padding: 0.4rem 1rem; color: #e1fff3; letter-spacing: .03em;}
+    .shadow-soft {box-shadow: var(--shadow-soft);}
+    .card {border: none; border-radius: 18px;}
+    .feature-card {background: #fff;}
+    .feature-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: rgba(26,191,138,0.12);
+      color: var(--secondary);
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      margin-left: 0.75rem;
+    }
+    .section-title {color: #0f4c3a; font-weight: 800;}
+    .section-subtitle {color: #4b5563;}
+    .event-card {background: linear-gradient(125deg, #0f4c3a, #14c38e); color: #fff;}
+    .news-card {transition: transform .2s ease, box-shadow .2s ease;}
+    .news-card:hover {transform: translateY(-6px); box-shadow: 0 18px 36px rgba(0,0,0,0.12);}
+    .footer {
+      background: #0c1f19;
+      color: #d7e8e0;
+    }
+    .footer a {color: #e3f3ec; text-decoration: none;}
+    .footer a:hover {color: #9ee6c5;}
+    .social a {display: inline-flex; width: 38px; height: 38px; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,0.08); margin-left: .35rem;}
+    .glass {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+    }
+    [data-animate] {opacity: 0; transform: translateY(25px); transition: all .7s ease;}
+    [data-animate].visible {opacity: 1; transform: translateY(0);}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <span class="brand-mark">E</span>
+        <div class="d-flex flex-column">
+          <span>مدرسه بین‌المللی اورگرین</span>
+          <small class="text-muted">Evergreen International School</small>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#home">خانه</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">درباره</a></li>
+          <li class="nav-item"><a class="nav-link" href="#departments">دپارتمان‌ها</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teachers">معلمان</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">تماس</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-sm btn-outline-success rounded-pill px-3">Login</button>
+          <button class="btn btn-sm btn-success rounded-pill px-3">Register</button>
+          <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">EN</button>
+          <button class="btn btn-sm btn-outline-warning rounded-pill px-3">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="container hero-content">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6" data-animate>
+          <span class="badge-soft">به جامعه ما خوش آمدید</span>
+          <h1 class="display-5 fw-bold mt-3">الهام‌بخش برتری از مسیر کنجکاوی، خلاقیت و شخصیت.</h1>
+          <p class="lead mt-3">مدرسه اورگرین تلفیقی از آموزش دقیق و راهنمایی مهربانانه است تا دانش‌آموزان در جامعه جهانی بدرخشند.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#about" class="btn btn-gradient">Watch Our Story</a>
+            <a href="#news" class="btn btn-outline-light border-2">Latest News</a>
+          </div>
+        </div>
+        <div class="col-lg-6" data-animate>
+          <div class="card glass shadow-soft border-0">
+            <img src="https://images.unsplash.com/photo-1519455953755-af066f52f1ea?auto=format&fit=crop&w=1200&q=80" class="card-img-top rounded-4" alt="Campus">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <span class="feature-icon flex-shrink-0">🏫</span>
+                <div>
+                  <h5 class="mb-0">محیطی پرانرژی و ایمن</h5>
+                  <small class="text-muted">کلاس‌های پرنور، حیاط‌های سبز، فناوری روز</small>
+                </div>
+              </div>
+              <p class="mb-0 text-muted">مربیان بین‌المللی و تیم پشتیبان ما در کنار دانش‌آموزان هستند تا مسیر یادگیری شخصی‌سازی‌شده و پر از انگیزه را تجربه کنند.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="event" class="py-5">
+    <div class="container" data-animate>
+      <div class="event-card rounded-4 p-4 p-lg-5 shadow-soft">
+        <div class="row align-items-center gy-3">
+          <div class="col-lg-8">
+            <p class="mb-1 fw-semibold text-uppercase letter-spacing">روز بازدید پیش رو</p>
+            <h2 class="h3 mb-3">با معلمان ما آشنا شوید، کلاس‌ها را ببینید و روش یادگیری شخصی‌سازی‌شده را کشف کنید.</h2>
+            <p class="mb-0">شنبه، ۱۶ آبان · ساعت ۱۰ سالن مرکزی اورگرین</p>
+          </div>
+          <div class="col-lg-4 text-lg-start text-center">
+            <a href="#contact" class="btn btn-light btn-lg rounded-pill px-4 py-3 fw-bold shadow-sm">Book a Visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6" data-animate>
+          <h2 class="section-title mb-3">ما که هستیم</h2>
+          <p class="section-subtitle mb-4">محیطی صمیمی که هر دانش‌آموز را می‌بیند و به چالش می‌کشد.</p>
+          <div class="row g-3" id="departments">
+            <div class="col-sm-12">
+              <div class="card feature-card shadow-soft p-3 h-100 d-flex flex-row align-items-start">
+                <span class="feature-icon">💡</span>
+                <div>
+                  <h5 class="fw-bold">کلاس‌های مدرن</h5>
+                  <p class="mb-0 text-muted">آزمایشگاه‌های روشن، استودیوهای تعاملی و کارگاه‌های سازنده برای STEM</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="card feature-card shadow-soft p-3 h-100 d-flex flex-row align-items-start">
+                <span class="feature-icon">🤝</span>
+                <div>
+                  <h5 class="fw-bold">توجه به کل دانش‌آموز</h5>
+                  <p class="mb-0 text-muted">مشاوره، سلامت، فعالیت‌های فراگیر</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="card feature-card shadow-soft p-3 h-100 d-flex flex-row align-items-start">
+                <span class="feature-icon">🌍</span>
+                <div>
+                  <h5 class="fw-bold">شهروندی جهانی</h5>
+                  <p class="mb-0 text-muted">برنامه درسی دو زبانه، تبادل فرهنگی، پروژه‌های اجتماعی</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-animate>
+          <div class="position-relative">
+            <div class="card shadow-soft border-0 rounded-4 overflow-hidden mb-3">
+              <img src="https://images.unsplash.com/photo-1558021211-6d1403321394?auto=format&fit=crop&w=1200&q=80" class="w-100" alt="Students collaborating">
+            </div>
+            <div class="card shadow-soft border-0 rounded-4 overflow-hidden position-absolute bottom-0 start-0 translate-middle-y" style="width: 65%; left: 10%;">
+              <img src="https://images.unsplash.com/photo-1509099836639-18ba02e2c314?auto=format&fit=crop&w=800&q=80" class="w-100" alt="Library">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="py-5">
+    <div class="container">
+      <div class="row align-items-center mb-4" data-animate>
+        <div class="col-lg-8">
+          <h2 class="section-title mb-2">آخرین خبرها</h2>
+          <p class="section-subtitle">از پیشرفت‌ها و رویدادهای جدید مدرسه باخبر بمانید.</p>
+        </div>
+        <div class="col-lg-4 text-lg-start text-end">
+          <a href="#contact" class="btn btn-gradient">Subscribe</a>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-animate>
+          <div class="card news-card h-100 shadow-soft">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Robotics team">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2 text-success fw-bold">🛠 آموزش</div>
+              <h5 class="card-title">تیم رباتیک به فینال منطقه‌ای راه یافت</h5>
+              <p class="card-text text-muted">۶ آبان ۱۴۰۳</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-animate>
+          <div class="card news-card h-100 shadow-soft">
+            <img src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Winter concert">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2 text-success fw-bold">🎨 هنر</div>
+              <h5 class="card-title">کنسرت زمستانی با درخشش استعدادها</h5>
+              <p class="card-text text-muted">۱۱ آبان ۱۴۰۳</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-animate>
+          <div class="card news-card h-100 shadow-soft">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Community service">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2 text-success fw-bold">🤝 اجتماع</div>
+              <h5 class="card-title">روز خدمت با پناهگاه‌های محلی</h5>
+              <p class="card-text text-muted">۱۹ آبان ۱۴۰۳</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <span class="brand-mark">E</span>
+            <div>
+              <h5 class="mb-1">مدرسه بین‌المللی اورگرین</h5>
+              <small class="text-light">Evergreen International School</small>
+            </div>
+          </div>
+          <p class="mb-0">مدرسه بین‌المللی اورگرین دانش‌آموزان را به شهروندانی خلاق، مسئول و بااعتمادبه‌نفس تبدیل می‌کند.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="mb-3">دسترسی سریع</h6>
+          <div class="d-flex flex-column gap-2">
+            <a href="#home">خانه</a>
+            <a href="#about">درباره</a>
+            <a href="#departments">دپارتمان‌ها</a>
+            <a href="#teachers">معلمان</a>
+            <a href="#contact">تماس</a>
+          </div>
+        </div>
+        <div class="col-md-4" id="teachers">
+          <h6 class="mb-3">ارتباط با ما</h6>
+          <p class="mb-1">تلفن: +555 123 4567</p>
+          <p class="mb-3">ایمیل: hello@evergreenschool.edu</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4">
+      <div class="d-flex justify-content-between flex-wrap gap-2 small text-secondary">
+        <span>© ۲۰۲۴ مدرسه بین‌المللی اورگرین. تمامی حقوق محفوظ است.</span>
+        <span>Evergreen International School</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.2});
+
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
