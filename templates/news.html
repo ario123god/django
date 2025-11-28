@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}News & Blog | Aurora School{% endblock %}
+{% block content %}
+<section class="page-header">
+    <h1>News & Blog</h1>
+    <p>School blog, newsletters, and announcements.</p>
+</section>
+<section class="grid two-col">
+    <div class="card">
+        <h3>Blog Posts</h3>
+        {% for post in posts %}
+        <div class="card muted-card">
+            <strong>{{ post.title }}</strong>
+            <p>{{ post.body|truncatewords:30 }}</p>
+            <small>{{ post.published_on }}</small>
+        </div>
+        {% empty %}<p>No posts yet.</p>{% endfor %}
+    </div>
+    <div class="card">
+        <h3>Newsletters</h3>
+        {% for n in newsletters %}
+        <div class="card">
+            <strong>{{ n.title }}</strong>
+            <p>{{ n.body|truncatewords:25 }}</p>
+            <small>{{ n.published_on }}</small>
+        </div>
+        {% empty %}<p>No newsletters yet.</p>{% endfor %}
+    </div>
+</section>
+{% endblock %}

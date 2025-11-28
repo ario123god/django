@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Faculty & Staff | Aurora School{% endblock %}
+{% block content %}
+<section class="page-header">
+    <h1>Faculty & Staff</h1>
+    <p>Meet our caring teachers, coordinators, and support staff.</p>
+</section>
+<section class="grid two-col">
+    {% for classroom in teachers %}
+    <div class="card">
+        <h3>{{ classroom.name }}</h3>
+        <p>Grade: {{ classroom.grade_level }}</p>
+        <ul class="list">
+            {% for subject in classroom.subjects.all %}
+            <li>{{ subject.teacher.user.get_full_name|default:'Teacher' }} — {{ subject.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% empty %}<p>No teachers yet.</p>{% endfor %}
+</section>
+{% endblock %}
