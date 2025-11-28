@@ -1,65 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Portal | Login</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/animation.css">
-</head>
-<body>
-    <header class="topbar">
-        <div class="container nav-wrapper">
-            <div class="brand">
-                <div class="logo gradient" aria-hidden="true"></div>
-                <div>
-                    <span class="brand-title">Riverside International School</span>
-                    <span class="brand-tagline">Learning for tomorrow</span>
-                </div>
-            </div>
-            <nav class="nav">
-                <a class="nav-link" href="/templates/home.html">Home</a>
-                <a class="nav-link" href="/templates/about.html">About</a>
-                <a class="nav-link" href="/templates/contact.html">Contact</a>
-            </nav>
-            <div class="nav-actions">
-                <a class="nav-link" href="register.html">Register</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="section gradient">
-        <div class="container narrow">
-            <div class="card shadow-soft fade-in">
-                <!-- {% block content %} -->
-                <div class="section-header">
-                    <h1>Welcome back</h1>
-                    <p class="lead">Sign in to access your personalized school dashboard.</p>
-                </div>
-                <div class="contact-form">
-                    <form id="login-form" novalidate>
-                        <label for="login-email">Email</label>
-                        <input id="login-email" name="email" type="email" placeholder="you@example.com" required>
-
-                        <label for="login-password">Password</label>
-                        <input id="login-password" name="password" type="password" placeholder="••••••••" required>
-
-                        <label class="muted" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-                            <input id="remember-me" type="checkbox" style="width: 18px; height: 18px;"> Remember me
-                        </label>
-
-                        <button type="submit" class="btn primary" style="width: 100%;">Login</button>
-                        <p id="login-message" class="muted"></p>
-                    </form>
-                </div>
-                <div class="section-header" style="margin-top: 1rem;">
-                    <p class="muted">Don't have an account? <a class="nav-link" href="register.html">Register</a></p>
-                </div>
-                <!-- {% endblock %} -->
-            </div>
-        </div>
-    </main>
-
-    <script src="/static/js/auth.js" defer></script>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Login | Aurora School{% endblock %}
+{% block content %}
+<section class="auth">
+    <div class="card">
+        <h2>Login</h2>
+        <form method="post" class="form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="pill" type="submit">Login</button>
+        </form>
+        <p class="muted">Forgot password? <a href="/password_reset/">Reset here</a></p>
+        <p>New user? <a href="/register/student/">Student</a> | <a href="/register/parent/">Parent</a></p>
+    </div>
+</section>
+{% endblock %}

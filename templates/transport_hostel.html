@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Transport & Hostel | Aurora School{% endblock %}
+{% block content %}
+<section class="page-header">
+    <h1>Transport & Hostel</h1>
+    <p>Safe transport routes and comfortable hostels for boarders.</p>
+</section>
+<section class="grid two-col">
+    <div class="card">
+        <h3>Transport Routes</h3>
+        <ul class="list">
+            {% for r in routes %}
+            <li><strong>{{ r.name }}</strong><br>Driver: {{ r.driver }} | Contact: {{ r.contact }}<br>Stops: {{ r.stops }}</li>
+            {% empty %}<li>No routes yet.</li>{% endfor %}
+        </ul>
+    </div>
+    <div class="card">
+        <h3>Hostel Rooms</h3>
+        <ul class="list">
+            {% for h in hostels %}
+            <li><strong>{{ h.name }}</strong> — Capacity: {{ h.capacity }}<br>Warden: {{ h.warden_contact }}</li>
+            {% empty %}<li>No hostels listed.</li>{% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

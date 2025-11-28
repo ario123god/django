@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}FAQ & Notices | Aurora School{% endblock %}
+{% block content %}
+<section class="page-header">
+    <h1>FAQ & Notices</h1>
+    <p>Important updates, emergency alerts, and helpful answers.</p>
+</section>
+<section class="grid two-col">
+    <div class="card">
+        <h3>FAQs</h3>
+        <ul class="list">
+            {% for faq in faqs %}
+            <li><strong>{{ faq.question }}</strong><br>{{ faq.answer }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="card">
+        <h3>Notices</h3>
+        <ul class="list">
+            {% for notice in notices %}
+            <li><strong>{{ notice.title }}</strong><br>{{ notice.body|truncatewords:20 }}</li>
+            {% empty %}<li>No notices available.</li>{% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Events & Activities | Aurora School{% endblock %}
+{% block content %}
+<section class="page-header">
+    <h1>Events & Activities</h1>
+    <p>Sports, cultural highlights, trips, workshops, and seminars.</p>
+</section>
+<section class="grid two-col">
+    <div class="card">
+        <h3>Event Calendar</h3>
+        <ul class="list">
+            {% for e in events %}
+            <li><strong>{{ e.name }}</strong> — {{ e.date }} at {{ e.location }}</li>
+            {% empty %}<li>No events yet.</li>{% endfor %}
+        </ul>
+    </div>
+    <div class="card">
+        <h3>Photo & Video Gallery</h3>
+        <div class="gallery">
+            {% for item in gallery %}
+            <div class="thumb">
+                <div class="placeholder">{{ item.title }}</div>
+                {% if item.video_url %}<small>Video: {{ item.video_url }}</small>{% endif %}
+            </div>
+            {% empty %}<p>No media uploaded.</p>{% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

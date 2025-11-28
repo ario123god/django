@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Fees & Scholarships | Aurora School{% endblock %}
+{% block content %}
+<section class="page-header">
+    <h1>Fees & Scholarships</h1>
+    <p>Transparent fee structure with flexible plans and scholarships.</p>
+</section>
+<section class="card">
+    <h3>Fee Structure</h3>
+    <div class="table">
+        <div class="table-row head"><span>Grade</span><span>Annual Fee</span><span>Notes</span></div>
+        <div class="table-row"><span>K-5</span><span>$2,000</span><span>Includes books & activities</span></div>
+        <div class="table-row"><span>6-8</span><span>$2,500</span><span>STEM lab access</span></div>
+        <div class="table-row"><span>9-12</span><span>$3,000</span><span>Advanced labs & electives</span></div>
+    </div>
+</section>
+<section class="grid two-col">
+    <div class="card">
+        <h3>Scholarships</h3>
+        <ul class="list">
+            {% for s in scholarships %}<li><strong>{{ s.name }}</strong> — {{ s.detail }}</li>{% endfor %}
+        </ul>
+    </div>
+    <div class="card highlight">
+        <h3>Online Payment Placeholder</h3>
+        <p>Parents can track fees, download receipts, and pay online (integration-ready placeholder).</p>
+    </div>
+</section>
+{% endblock %}
